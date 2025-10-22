@@ -1,0 +1,12 @@
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.2
+matplotlib==3.9.2
+seaborn==0.13.2
+geopy==2.4.1
+fuzzywuzzy==0.18.0
+orjson==3.10.6
+textdistance==4.6.0
+jupyter==1.0.0
+torch==2.1.0
+
