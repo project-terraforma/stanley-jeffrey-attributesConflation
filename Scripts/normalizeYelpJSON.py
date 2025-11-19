@@ -1,3 +1,4 @@
+
 '''
 1. Summary of Normalization Steps
 Step	Action
