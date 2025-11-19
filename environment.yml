@@ -1,0 +1,21 @@
+name: attribute-conflation
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas
+  - geopandas
+  - duckdb
+  - rapidfuzz
+  - scikit-learn
+  - jupyterlab
+  - numpy
+  - shapely
+  - fiona
+  - matplotlib
+  - seaborn
+  - pip
+  - pip:
+      - pyproj
+
