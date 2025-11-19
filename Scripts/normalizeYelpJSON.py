@@ -54,7 +54,7 @@ def normalize_yelp_json(input_file):
 
     key_fields = [
         "business_id", "name", "address", "city", "state",
-        "postal_code", "categories"
+        "postal_code", "latitude", "longitude","categories"
     ]
     #select only the key fields we highlighted
     df = df[key_fields]
@@ -73,4 +73,6 @@ def normalize_yelp_json(input_file):
     
     return df
 
-print(normalize_yelp_json('/Users/stanleyshen/stanley-jeffrey-attributesConflation/data/sample_data.json'))
+normalized_df = normalize_yelp_json('../data/sample_data.json')
+normalized_df.to_csv('../data/normalized_yelp.csv', index=False)
+print("Normalization complete. Data saved to normalized_yelp.csv")
