@@ -75,5 +75,5 @@ def normalize_yelp_json(input_file):
     return df
 
 normalized_df = normalize_yelp_json('../data/sample_data.json')
-normalized_df.to_csv('../data/normalized_yelp.csv', index=False)
+# normalized_df.to_csv('../data/normalized_yelp.csv', index=False)
 print("Normalization complete. Data saved to normalized_yelp.csv")
