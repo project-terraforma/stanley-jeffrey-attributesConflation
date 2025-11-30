@@ -44,7 +44,7 @@ This process supports the broader **Overture initiative** to unify place data fr
 - Raw data is in data/raw (original JSON/GeoJSON from sources).
 - Normalization happens in src/data_preprocessing → produces cleaned datasets in data/interim.
 - Triplet matching is performed by scripts in scripts/, producing yelp_triplet_matches.csv.
-**Attribute conflation:**
+- **Attribute conflation:**
 - Rule-based in rule_based_selectionV1.py, evaluated with rule_based_accuracy.py.
 - ML-based in ML_train.py, ML_infer.py, ML_eval.py, producing ml_predictions.csv.
 - SQL scripts in scripts/extract_data/ are used to pull city-specific datasets.
