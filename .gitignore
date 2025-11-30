@@ -1,0 +1,10 @@
+data/raw/
+data/interim/
+
+*.geojson
+*.json
+
+venv/
+__pycache__/
+*.pyc
+
