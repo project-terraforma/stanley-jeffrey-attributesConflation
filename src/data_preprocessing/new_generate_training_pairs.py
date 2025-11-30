@@ -46,16 +46,6 @@ print("Generating candidate pairs (Blocking)...")
 df_yelp['block_key'] = df_yelp['city'] + "_" + df_yelp['name_norm'].str[0:3]
 df_other['block_key'] = df_other['city'] + "_" + df_other['name_norm'].str[0:3]
 
-# Inner Join
-pairs = pd.merge(
-    df_yelp, 
-    df_other, 
-    on='block_key', 
-    suffixes=('_left', '_right')
-)
-
-print(f"New Pair Count: {len(pairs)}")
-
 # Inner Join on the blocking key
 pairs = pd.merge(
     df_yelp, 
