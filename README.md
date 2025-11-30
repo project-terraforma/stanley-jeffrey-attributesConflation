@@ -77,7 +77,6 @@ This process supports the broader **Overture initiative** to unify place data fr
 ## Challenges
 - **Data availability and coverage:** Some datasets do not cover all geographic areas, limiting evaluation scope.
 - **Overpass API limitations:** Encountered query timeouts for large OSM data batches; mitigated by narrowing geographic scopes and using Python tools.
-- **Pending sponsor feedback:** Awaiting confirmation from the OMF team regarding OKR alignment and data priorities.
 
 ---
 
