@@ -1,0 +1,9 @@
+feature,importance
+overpass_name_sim_to_true,0.2084965652303714
+yelp_name_sim_to_true,0.1976770469527418
+omf_score,0.1326806214865975
+omf_name_sim_to_true,0.1151195676112707
+overpass_score,0.1116289962792146
+omf_distance,0.0766529656039447
+overpass_distance,0.0700709124375458
+has_overpass,0.0679957199004591
