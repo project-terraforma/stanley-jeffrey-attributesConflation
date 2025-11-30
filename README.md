@@ -8,40 +8,47 @@ This process supports the broader **Overture initiative** to unify place data fr
 
 ## Repo Structure
 
-scripts/          # Python scripts for extraction, normalization, matching, and attribute conflation
-  ├─ rule_based_selectionV1.py
-  ├─ ML_based_selectionV1.py
-  ├─ place_id_matches.py
-  ├─ generate_ground_truth_dataset.py
-  ├─ feature_generator.py
-  ├─ ML_train.py
-  ├─ ML_infer.py
-  ├─ ML_eval.py
-  └─ extract_*.sql        # SQL scripts for data extraction
 
-src/              # Reusable Python modules
-  ├─ data_preprocessing/  # Normalize source datasets
-  ├─ matching/            # Candidate generation & record matching
-  ├─ conflation/          # Rule-based / ML attribute conflation
-  └─ utils/               # General helper functions
+```text
+.
+├── scripts/
+│   ├── rule_based_selectionV1.py
+│   ├── ML_based_selectionV1.py
+│   ├── place_id_matches.py
+│   ├── generate_ground_truth_dataset.py
+│   ├── feature_generator.py
+│   ├── ML_train.py
+│   ├── ML_infer.py
+│   ├── ML_eval.py
+│   └── extract_*.sql
+├── src/
+│   ├── data_preprocessing/
+│   ├── matching/
+│   ├── conflation/
+│   └── utils/
+├── data/
+│   ├── raw/
+│   ├── interim/
+│   └── processed/
+├── models/
+├── notebooks/
+├── tests/
+├── requirements.txt
+├── environment.yml
+├── README.md
+└── LICENSE
+```
 
-data/            # Datasets
-  ├─ raw/        # Original source datasets (Yelp, OMF, Overpass)
-  ├─ interim/    # Intermediate processed files (normalized chunks, matched datasets)
-  └─ processed/  # Final datasets for conflation & evaluation
-                 # Examples: yelp_triplet_matches.csv, yelp_conflated.csv, ml_predictions.csv, yelp_ground_truth.csv, ML_BEST_ATTRIBUTES.csv
+### Summary of workflow:
 
-models/           # Trained ML models & metadata
-
-notebooks/        # Jupyter notebooks for exploration, testing, visualization
-
-tests/            # Unit and integration tests
-
-requirements.txt / environment.yml  # Dependency specifications
-
-README.md / LICENSE               # Project documentation & license
-
-
+- Raw data is in data/raw (original JSON/GeoJSON from sources).
+- Normalization happens in src/data_preprocessing → produces cleaned datasets in data/interim.
+- Triplet matching is performed by scripts in scripts/, producing yelp_triplet_matches.csv.
+**Attribute conflation:**
+- Rule-based in rule_based_selectionV1.py, evaluated with rule_based_accuracy.py.
+- ML-based in ML_train.py, ML_infer.py, ML_eval.py, producing ml_predictions.csv.
+- SQL scripts in scripts/extract_data/ are used to pull city-specific datasets.
+- Final processed datasets (ground truth, conflated, ML predictions) live in data/processed/.
 
 ## Project Roadmap
 
