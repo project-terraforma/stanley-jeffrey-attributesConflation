@@ -6,6 +6,43 @@ This process supports the broader **Overture initiative** to unify place data fr
 
 ---
 
+## Repo Structure
+
+###scripts/          # Python scripts for extraction, normalization, matching, and attribute conflation
+###  ├─ rule_based_selectionV1.py
+###  ├─ ML_based_selectionV1.py
+  ├─ place_id_matches.py
+  ├─ generate_ground_truth_dataset.py
+  ├─ feature_generator.py
+  ├─ ML_train.py
+  ├─ ML_infer.py
+  ├─ ML_eval.py
+  └─ extract_*.sql        # SQL scripts for data extraction
+
+src/              # Reusable Python modules
+  ├─ data_preprocessing/  # Normalize source datasets
+  ├─ matching/            # Candidate generation & record matching
+  ├─ conflation/          # Rule-based / ML attribute conflation
+  └─ utils/               # General helper functions
+
+data/             # Datasets
+  ├─ raw/        # Original source datasets (Yelp, OMF, Overpass)
+  ├─ interim/    # Intermediate processed files (normalized chunks, matched datasets)
+  └─ processed/  # Final datasets for conflation & evaluation
+                 # Examples: yelp_triplet_matches.csv, yelp_conflated.csv, ml_predictions.csv, yelp_ground_truth.csv, ML_BEST_ATTRIBUTES.csv
+
+models/           # Trained ML models & metadata
+
+notebooks/        # Jupyter notebooks for exploration, testing, visualization
+
+tests/            # Unit and integration tests
+
+requirements.txt / environment.yml  # Dependency specifications
+
+README.md / LICENSE               # Project documentation & license
+
+
+
 ## Project Roadmap
 
 ### Phase 1 – Data Preparation
