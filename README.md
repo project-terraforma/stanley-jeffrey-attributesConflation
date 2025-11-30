@@ -8,9 +8,9 @@ This process supports the broader **Overture initiative** to unify place data fr
 
 ## Repo Structure
 
-###scripts/          # Python scripts for extraction, normalization, matching, and attribute conflation
-###  ├─ rule_based_selectionV1.py
-###  ├─ ML_based_selectionV1.py
+scripts/          # Python scripts for extraction, normalization, matching, and attribute conflation
+  ├─ rule_based_selectionV1.py
+  ├─ ML_based_selectionV1.py
   ├─ place_id_matches.py
   ├─ generate_ground_truth_dataset.py
   ├─ feature_generator.py
@@ -25,7 +25,7 @@ src/              # Reusable Python modules
   ├─ conflation/          # Rule-based / ML attribute conflation
   └─ utils/               # General helper functions
 
-data/             # Datasets
+data/            # Datasets
   ├─ raw/        # Original source datasets (Yelp, OMF, Overpass)
   ├─ interim/    # Intermediate processed files (normalized chunks, matched datasets)
   └─ processed/  # Final datasets for conflation & evaluation
