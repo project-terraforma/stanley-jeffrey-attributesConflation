@@ -4,24 +4,22 @@ import re
 import os
 
 # --- 1. CONFIGURATION ---
-# Update these paths to match your actual filenames
+# Paths are relative to the project root (stanley-jeffrey-attributesConflation)
 FILES = {
-    'yelp': '../../data/yelp_philly_sb.json',
+    'yelp': 'data/yelp_philly_sb.json',
     
-    # List all your Overture GeoJSONs here
     'omf': [
-        {'path': '../../data/raw/omf_santa_barbara.geojson', 'city': 'Santa Barbara'},
-        {'path': '../../data/raw/omf_philadelphia.geojson', 'city': 'Philadelphia'}
+        {'path': 'data/raw/omf_santa_barbara.geojson', 'city': 'Santa Barbara'},
+        {'path': 'data/raw/omf_philadelphia.geojson', 'city': 'Philadelphia'}
     ],
     
-    # List all your Overpass JSONs here
     'osm': [
-        {'path': '../../data/raw/overpass_santaBarbara.geojson', 'city': 'Santa Barbara'},
-        {'path': '../../data/raw/overpass_philadelphia.geojson', 'city': 'Philadelphia'} # Uncomment if you have this
+        {'path': 'data/raw/overpass_santaBarbara.geojson', 'city': 'Santa Barbara'},
+        {'path': 'data/raw/overpass_philadelphia.geojson', 'city': 'Philadelphia'} 
     ]
 }
 
-OUTPUT_FILE = '../../data/training_data_normalized.json'
+OUTPUT_FILE = 'data/interim/normalized_p_sb_data.json'
 
 # --- 2. HELPER FUNCTIONS ---
 
@@ -115,25 +113,18 @@ def load_osm(file_info):
     rows = []
     
     # --- DETECT FORMAT ---
-    
-    # CASE 1: GeoJSON FeatureCollection (The likely fix)
     if isinstance(data, dict) and 'features' in data:
         print(f"   -> Detected GeoJSON format ({len(data['features'])} features).")
         source_list = data['features']
         is_geojson = True
-        
-    # CASE 2: Standard Overpass API
     elif isinstance(data, dict) and 'elements' in data:
         print(f"   -> Detected Overpass API format ({len(data['elements'])} elements).")
         source_list = data['elements']
         is_geojson = False
-        
-    # CASE 3: DuckDB List Export
     elif isinstance(data, list):
         print(f"   -> Detected List format ({len(data)} items).")
         source_list = data
         is_geojson = False
-        
     else:
         print("❌ Unknown JSON format. Could not find 'features' or 'elements'.")
         return pd.DataFrame()
@@ -143,7 +134,6 @@ def load_osm(file_info):
         # 1. Get Tags/Properties
         if is_geojson:
             tags = item.get('properties', {})
-            # GeoJSON IDs are often in 'id' or properties['@id']
             osm_id = item.get('id') or tags.get('@id')
         else:
             tags = item.get('tags', {})
@@ -165,7 +155,6 @@ def load_osm(file_info):
         lat, lon = None, None
         
         if is_geojson:
-            # GeoJSON stores coords in geometry -> coordinates
             geom = item.get('geometry', {})
             coords = geom.get('coordinates')
             geom_type = geom.get('type')
@@ -173,12 +162,21 @@ def load_osm(file_info):
             if geom_type == 'Point' and coords:
                 lon, lat = coords[0], coords[1]
             elif geom_type == 'Polygon' and coords:
-                # Take the first point of the polygon as a rough center
                 lon, lat = coords[0][0][0], coords[0][0][1]
         else:
-            # Standard OSM Format
             lat = item.get('lat') or item.get('center', {}).get('lat')
             lon = item.get('lon') or item.get('center', {}).get('lon')
+
+        # --- [NEW CODE STARTS HERE] ---
+        # 6. FILTER OUT BAD TYPES
+        # If we couldn't find coordinates (e.g. LineStrings), skip it.
+        if lat is None or lon is None:
+            continue
+            
+        # If the category looks like a train route, boundary, or highway, skip it.
+        if tags.get('route') or tags.get('boundary') or tags.get('highway'):
+            continue
+        # --- [NEW CODE ENDS HERE] ---
 
         rows.append({
             'id': f"osm_{osm_id}",

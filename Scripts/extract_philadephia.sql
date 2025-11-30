@@ -10,7 +10,6 @@ COPY (
     names.primary AS name,
     categories.primary AS category,
     addresses[1].freeform AS address,
-    confidence, -- Highly recommended to include this for filtering later
     geometry
   FROM read_parquet(
      's3://overturemaps-us-west-2/release/2025-10-22.0/theme=places/type=place/*',
