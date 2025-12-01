@@ -16,21 +16,21 @@ COPY (
      hive_partitioning=1
   )
   WHERE 
-    -- PRIMARY OPTIMIZATION: Filter using the 'bbox' struct first.
-    -- This enables Parquet "Predicate Pushdown" (skips file downloads).
-    bbox.xmin >= -75.28 
-    AND bbox.xmax <= -74.96
-    AND bbox.ymin >= 39.87 
-    AND bbox.ymax <= 40.14
+    -- RENO BOUNDING BOX (Optimization)
+    bbox.xmin >= -120.05
+    AND bbox.xmax <= -119.70
+    AND bbox.ymin >= 39.45
+    AND bbox.ymax <= 39.65
     
-    -- SECONDARY FILTER: Precise geometry check.
+    -- SECONDARY FILTER (Precise Polygon)
     AND ST_Within(
       geometry,
       ST_GeomFromText(
-        'POLYGON((-75.28 39.87, -74.96 39.87, -74.96 40.14, -75.28 40.14, -75.28 39.87))'
+        -- Order: Bottom-Left -> Bottom-Right -> Top-Right -> Top-Left -> Bottom-Left
+        'POLYGON((-120.05 39.45, -119.70 39.45, -119.70 39.65, -120.05 39.65, -120.05 39.45))'
       )
     )
-  LIMIT 5000
+  -- Note: I removed LIMIT 5000 so you get ALL Reno data for your eval set
 )
-TO 'data/interim/omf_philadelphia.geojson'
+TO 'data/interim/omf_reno.geojson'
 WITH (FORMAT GDAL, DRIVER 'GeoJSON');

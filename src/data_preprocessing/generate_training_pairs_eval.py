@@ -5,14 +5,14 @@ import duckdb
 import os
 
 # --- CONFIG ---
-INPUT_FILE = 'data/normalized_p_sb_data.json'
-OUTPUT_FILE = 'data/training_pairs_labeled_temp.json'
+INPUT_FILE = 'data/normalized_eval_cities.json'
+OUTPUT_FILE = 'data/eval_training_pairs_labeled.json'
 
 # INPUT: Your accumulated wisdom (The file you edit/append to)
-MANUAL_LABELS_INPUT = 'data/processed/manual_labels_temp.csv'
+MANUAL_LABELS_INPUT = 'data/processed/manual_labels_eval.csv'
 
 # OUTPUT: New questions for next time (The file the script creates)
-UNCERTAIN_OUTPUT = 'data/processed/active_learning_candidates_temp.csv'
+UNCERTAIN_OUTPUT = 'data/processed/active_learning_candidates_eval.csv'
 
 # --- HELPER: HAVERSINE DISTANCE ---
 def haversine(lon1, lat1, lon2, lat2):
@@ -143,85 +143,20 @@ if len(uncertain_pairs) > 0:
     print(f"⚠️  Saved {len(uncertain_pairs)} NEW ambiguous pairs to {UNCERTAIN_OUTPUT}")
     print("    (Action: Copy labeled rows from this file -> manual_labels.csv)")
 
-# # --- 7. FINAL DATASET & BALANCING ---
-# training_set = pairs[pairs['label'] != -1].copy()
+# --- 7. FINAL DATASET & BALANCING ---
+training_set = pairs[pairs['label'] != -1].copy()
 
-# print("Balancing dataset...")
-# df_pos = training_set[training_set['label'] == 1]
-# df_neg = training_set[training_set['label'] == 0]
-
-# # Sample 5x as many negatives as positives
-# n_pos = len(df_pos)
-# n_neg_keep = n_pos * 5 
-
-# if len(df_neg) > n_neg_keep:
-#     df_neg = df_neg.sample(n=n_neg_keep, random_state=42)
-
-# training_set = pd.concat([df_pos, df_neg])
-# training_set = training_set.sample(frac=1, random_state=42).reset_index(drop=True)
-
-# # --- 8. EXPORT TRAINING DATA ---
-# final_cols = [
-#     'id_left', 'source_left', 'name_norm_left', 'address_left',
-#     'lat_left', 'lon_left',
-#     'id_right', 'source_right', 'name_norm_right', 'address_right',
-#     'lat_right', 'lon_right',
-#     'geo_distance', 'name_score', 'address_score', 'label'
-# ]
-
-# # Safeguard
-# use_cols = [c for c in final_cols if c in training_set.columns]
-# training_set = training_set[use_cols]
-
-# print(f"Generated {len(training_set)} labeled pairs.")
-# print(f"Positives: {len(training_set[training_set['label']==1])}")
-# print(f"Negatives: {len(training_set[training_set['label']==0])}")
-
-# print(f"Exporting training data to {OUTPUT_FILE}...")
-# training_set.to_json(OUTPUT_FILE, orient='records', lines=True)
-# print("Done.")
-# --- 7. FINAL DATASET: HARD MODE ONLY ---
-# We want to throw away the "Easy" stuff (Obvious 1s and Obvious 0s)
-# We want to keep pairs where the model is likely to be confused.
-
-print("Filtering for SUPER HARD decisions only...")
-
-# Define "Hard" Logic:
-# 1. It was manually labeled (Always keep human wisdom) 
-
-# OR
-# 2. It falls in the "Danger Zone" (Name Score 0.40 to 0.85) AND Distance is reasonably close (< 150m)
-
-is_manual = pairs['id_left'].isin(manual_df['id_left']) if 'manual_df' in locals() else False
-
-# The Danger Zone Filter
-is_hard_case = (
-    (pairs['name_score'] >= 0.40) & 
-    (pairs['name_score'] <= 0.85) 
-)
-
-# Apply the filter
-# We only want rows that are (Hard OR Manual) AND have a valid label (0 or 1)
-# Note: If it's -1, it goes to the uncertain pile (Section 6), not here.
-training_set = pairs[
-    (is_manual | is_hard_case) & 
-    (pairs['label'].isin([0, 1]))
-].copy()
-
-# Balancing is less important here because hard cases are rare, 
-# but let's still ensure we don't have 10,000 negatives and 2 positives.
+print("Balancing dataset...")
 df_pos = training_set[training_set['label'] == 1]
 df_neg = training_set[training_set['label'] == 0]
 
-print(f"Hard Positives found: {len(df_pos)}")
-print(f"Hard Negatives found: {len(df_neg)}")
+# Sample 5x as many negatives as positives
+n_pos = len(df_pos)
+n_neg_keep = n_pos * 5 
 
-# Cap negatives at 3x positives to keep it focused
-if len(df_pos) > 0:
-    n_neg_keep = len(df_pos) * 3
-    if len(df_neg) > n_neg_keep:
-        df_neg = df_neg.sample(n=n_neg_keep, random_state=42)
-        
+if len(df_neg) > n_neg_keep:
+    df_neg = df_neg.sample(n=n_neg_keep, random_state=42)
+
 training_set = pd.concat([df_pos, df_neg])
 training_set = training_set.sample(frac=1, random_state=42).reset_index(drop=True)
 
@@ -238,7 +173,10 @@ final_cols = [
 use_cols = [c for c in final_cols if c in training_set.columns]
 training_set = training_set[use_cols]
 
-print(f"Generated {len(training_set)} HARD labeled pairs.")
-print(f"Exporting to {OUTPUT_FILE}...")
+print(f"Generated {len(training_set)} labeled pairs.")
+print(f"Positives: {len(training_set[training_set['label']==1])}")
+print(f"Negatives: {len(training_set[training_set['label']==0])}")
+
+print(f"Exporting training data to {OUTPUT_FILE}...")
 training_set.to_json(OUTPUT_FILE, orient='records', lines=True)
 print("Done.")

@@ -3,7 +3,7 @@ INSTALL spatial; LOAD spatial;
 INSTALL httpfs; LOAD httpfs;
 SET s3_region='us-west-2';
 
--- 2. Extraction
+-- 2. Execution
 COPY (
   SELECT
     id,
@@ -16,16 +16,20 @@ COPY (
      hive_partitioning=1
   )
   WHERE 
-    -- CORRECTED COLUMN NAMES: xmin, xmax, ymin, ymax
-    bbox.xmin >= -119.85 AND bbox.xmax <= -119.64
-    AND bbox.ymin >= 34.38 AND bbox.ymax <= 34.48
+    -- TUCSON BOUNDING BOX
+    bbox.xmin >= -111.08
+    AND bbox.xmax <= -110.72
+    AND bbox.ymin >= 32.10
+    AND bbox.ymax <= 32.35
     
-    -- Geometry filter
+    -- SECONDARY FILTER
     AND ST_Within(
       geometry,
-      ST_GeomFromText('POLYGON((-119.85 34.38, -119.64 34.38, -119.64 34.48, -119.85 34.48, -119.85 34.38))')
+      ST_GeomFromText(
+        'POLYGON((-111.08 32.10, -110.72 32.10, -110.72 32.35, -111.08 32.35, -111.08 32.10))'
+      )
     )
-    LIMIT 5000
+  -- Removed LIMIT so you get the full evaluation set
 )
-TO 'data/interim/omf_santa_barbara.geojson'
+TO 'data/interim/omf_tucson.geojson'
 WITH (FORMAT GDAL, DRIVER 'GeoJSON');

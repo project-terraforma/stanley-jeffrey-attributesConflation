@@ -6,21 +6,23 @@ import os
 # --- 1. CONFIGURATION ---
 # Paths are relative to the project root (stanley-jeffrey-attributesConflation)
 FILES = {
-    'yelp': 'data/yelp_philly_sb.json',
+    # NOW A LIST (Just like OMF/OSM)
+    'yelp': 'data/yelp_eval_cities.json',
     
     'omf': [
-        {'path': 'data/raw/omf_santa_barbara.geojson', 'city': 'Santa Barbara'},
-        {'path': 'data/raw/omf_philadelphia.geojson', 'city': 'Philadelphia'}
+        {'path': 'data/raw/omf_tucson.geojson', 'city': 'Tucson'},
+        {'path': 'data/raw/omf_tampa.geojson', 'city': 'Tampa'},
+        {'path': 'data/raw/omf_reno.geojson', 'city': 'Renon'}
     ],
     
     'osm': [
-        {'path': 'data/raw/overpass_santaBarbara.geojson', 'city': 'Santa Barbara'},
-        {'path': 'data/raw/overpass_philadelphia.geojson', 'city': 'Philadelphia'} 
+        {'path': 'data/raw/overpass_tucson.geojson', 'city': 'Tucson'},
+        {'path': 'data/raw/overpass_tampa.geojson', 'city': 'Tampa'},
+        {'path': 'data/raw/overpass_reno.geojson', 'city': 'Reno'}
     ]
 }
 
-OUTPUT_FILE = 'data/normalized_p_sb_data.json'
-LIMIT = 50000
+OUTPUT_FILE = 'data/normalized_eval_cities.json'
 # --- 2. HELPER FUNCTIONS ---
 
 def clean_text(text):
@@ -215,7 +217,6 @@ def main():
         return
         
     df_all = pd.concat(dfs, ignore_index=True)
-    df_all = df_all.head(LIMIT)
     print(f"Total Raw Records: {len(df_all)}")
 
     # 5. Normalize Columns

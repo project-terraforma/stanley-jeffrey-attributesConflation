@@ -3,7 +3,7 @@ INSTALL spatial; LOAD spatial;
 INSTALL httpfs; LOAD httpfs;
 SET s3_region='us-west-2';
 
--- 2. Extraction
+-- 2. Execution
 COPY (
   SELECT
     id,
@@ -16,16 +16,20 @@ COPY (
      hive_partitioning=1
   )
   WHERE 
-    -- CORRECTED COLUMN NAMES: xmin, xmax, ymin, ymax
-    bbox.xmin >= -119.85 AND bbox.xmax <= -119.64
-    AND bbox.ymin >= 34.38 AND bbox.ymax <= 34.48
+    -- TAMPA BOUNDING BOX
+    bbox.xmin >= -82.58
+    AND bbox.xmax <= -82.38
+    AND bbox.ymin >= 27.88
+    AND bbox.ymax <= 28.12
     
-    -- Geometry filter
+    -- SECONDARY FILTER
     AND ST_Within(
       geometry,
-      ST_GeomFromText('POLYGON((-119.85 34.38, -119.64 34.38, -119.64 34.48, -119.85 34.48, -119.85 34.38))')
+      ST_GeomFromText(
+        'POLYGON((-82.58 27.88, -82.38 27.88, -82.38 28.12, -82.58 28.12, -82.58 27.88))'
+      )
     )
-    LIMIT 5000
+  -- Removed LIMIT so you get the full evaluation set
 )
-TO 'data/interim/omf_santa_barbara.geojson'
+TO 'data/interim/omf_tampa.geojson'
 WITH (FORMAT GDAL, DRIVER 'GeoJSON');
