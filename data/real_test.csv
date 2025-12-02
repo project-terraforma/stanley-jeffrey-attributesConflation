@@ -249,3 +249,252 @@ meun fan thai cafe,fantastic sams,149.299479643709,0.5,0.846153846153846,0
 paul mitchell the school santa barbara,couch santa barbara,263.24876841719,0.596491228070176,0.37037037037037,0
 hilton philadelphia airport,doubletree by hilton philadelphia airport,4.29034831060195,0.794117647058824,0.909090909090909,0
 santa barbara adventure company,santa barbara community housing corporation,99.4468388888183,0.621621621621622,0.846153846153846,0
+name_left,name_right,geo_distance,name_score,address_score,label
+luna bella,barrio design,260.6966451742,0.2608695652,0.6875,0.0
+eyeglass repair,reno disposal,56.0938762247,0.2857142857,0.7096774194,0.0
+are pitas,are pitas,20.7508088251,1.0,1.0,1.0
+budget motors,paqueteria paisanos,158.1365894395,0.375,0.3448275862,0.0
+springhill suites by marriott tampa westshore airport,springhill suites tampa westshore airport,7.9323488635,0.8723404255,0.8292682927,1.0
+jerk huts jamaica tropicale,feel great real estate,282.720440738,0.3673469388,0.5161290323,0.0
+grand buffet,grand buffet,9.1659928841,1.0,1.0,1.0
+dominos pizza,kahwa espresso bar at element,187.8273690437,0.1428571429,0.8235294118,0.0
+kelly days firehouse tavern,kelly days firehouse tavern,10.3640971414,1.0,1.0,1.0
+el sol family medicine,el sol family medicine,25.1121898195,1.0,1.0,1.0
+taco del mar,revolution online marketing,354.6812098274,0.4102564103,0.3870967742,0.0
+ross dress for less,suci nails,345.1368072826,0.275862069,0.8421052632,0.0
+tobacco barn,tobacco barn,4.7182135451,1.0,1.0,1.0
+midas,family life chiropractic,241.122909476,0.2068965517,0.8571428571,0.0
+village inn,coastal family fitness,420.1012473475,0.303030303,0.4736842105,0.0
+nationwide vision centers,redbox,142.0151919879,0.1290322581,0.7272727273,0.0
+quiznos,quiznos,15.7231750999,1.0,0.8181818182,1.0
+armory park,ace hardware,283.7391642682,0.347826087,0.0,0.0
+the blue bistro at the tampa westshore marriott,thompson financial,309.5227176892,0.3076923077,0.6976744186,0.0
+northern nevada pride festival and community parade,icecycle creamery,237.1478843205,0.2352941176,0.0,0.0
+hilton garden inn tampa ybor historic district,tbbc patio bar,209.8927486291,0.2666666667,0.0,0.0
+sem power,sem power,37.4604601949,1.0,0.8444444444,1.0
+ranch house restaurant,q bola tampa llc,197.7787779013,0.3157894737,0.8636363636,0.0
+bayshore pet resort,bayshore pet resort,18.0670980137,1.0,1.0,1.0
+coachs grill sports bar 2,coachs grill and sports bar,38.2608595598,0.8846153846,0.8695652174,1.0
+starbucks,starbucks,9.4737778635,1.0,0.8292682927,1.0
+dutch bros coffee,batteries plus bulbs,288.4159065546,0.2162162162,0.8333333333,0.0
+chic venue,ubc university bicycle center,40.247753354,0.358974359,0.8421052632,0.0
+gasparilla festival of the arts,patty wagon,299.4415505887,0.2857142857,0.275862069,0.0
+tahoe nevada love,sierra street kitchen and cocktails,184.6275338242,0.3076923077,0.4324324324,0.0
+barnes noble,avion at carrollwood,270.0226893421,0.3125,0.9090909091,0.0
+jw photography,jim click hyundai east used cars,337.6420004797,0.2173913043,0.3333333333,0.0
+dicks sporting goods,coach,134.0402580081,0.16,0.75,0.0
+chart house,chart house,5.2604495853,1.0,0.3111111111,1.0
+shawarma asham,sonnys bbq,178.5863629647,0.1666666667,0.8823529412,0.0
+taco bus,visionworks,288.335372782,0.2105263158,0.4615384615,0.0
+hungry howies pizza subs,vvy nails spa,263.6751887803,0.3783783784,0.8695652174,0.0
+kettle restaurant,kettle restaurant,6.4925014897,1.0,0.84,1.0
+once upon a child reno,nevada womens fund,183.6387879881,0.35,0.6976744186,0.0
+imagination preschool and childcare center,wells fargo,185.4737583739,0.1886792453,0.8,0.0
+sonora quest laboratories,cimarron family vision center pc,239.3993480216,0.2807017544,0.7692307692,0.0
+crafted palette,revival reno,346.3670848934,0.3703703704,0.4137931034,0.0
+fairfield inn suites tampa fairgroundscasino,subway,217.0762092802,0.12,0.3928571429,0.0
+amy barber beauty salon,amys barber and beauty salon,16.5639083137,0.9019607843,1.0,1.0
+dollar tree,realm,196.2580843958,0.25,0.4,0.0
+andy medrano painting,la famiglia,239.9504260333,0.3125,0.0,0.0
+bella prana yoga and meditation,legal service law office,335.8354029981,0.2909090909,0.4827586207,0.0
+the dive bar and kitchen,momentum,208.7906435605,0.1875,0.9,0.0
+heata blow dry lounge,melissa m medina,68.5019027953,0.3243243243,0.7368421053,0.0
+yellow house furniture,shepro insurance services,342.5329695038,0.3829787234,0.3636363636,0.0
+northern nevada real estate school,northern nevada real estate,5.5311341806,0.8852459016,1.0,1.0
+duckweed urban grocery,embroidery heat,316.7362410558,0.3783783784,0.0,0.0
+forever 21,games galore entertainment center,125.7418079176,0.2790697674,0.0,0.0
+cox cable,hq,223.5439640903,0.0,0.35,0.0
+temple of music and art,moca tucson,157.2794123402,0.3529411765,0.4516129032,0.0
+super nail,super nails,12.6584523533,0.9523809524,1.0,1.0
+boldt line tailor cloth,the concrete lotus,318.7525823452,0.4390243902,0.3636363636,0.0
+scoot over,us air force recruiting,101.3791472086,0.303030303,0.9,0.0
+hair cuttery,truist atm,139.5675357042,0.3636363636,0.2926829268,0.0
+eric escobar dds,molof vohl attorneys at law,308.0172269122,0.2325581395,0.5185185185,0.0
+franklin on twiggs eatery market,frontier building,275.3138408853,0.3673469388,0.5416666667,0.0
+tampa firefighters museum,optic marketing group,106.3998107422,0.3913043478,0.8461538462,0.0
+oriental express chinese sushi restaurant,laura a olson pa,108.2290406368,0.2456140351,0.4516129032,0.0
+edible arrangements,edible arrangements,10.5560687932,1.0,1.0,1.0
+sierra st kitchen cocktails,sierra street kitchen and cocktails,45.7538468668,0.8709677419,0.7,1.0
+sacred heart catholic church,maney gordon zeller,370.3642983479,0.2978723404,0.3,0.0
+gospel supplies,vitamin shoppe,252.2136180561,0.3448275862,0.8372093023,0.0
+blondees gelato,franklin street market,100.2856959791,0.3783783784,0.3125,0.0
+pandora jewelry,tesla,152.9685679958,0.2,0.7450980392,0.0
+suite 103,thanias juice bar,177.0038657935,0.3846153846,0.4210526316,0.0
+five guys burgers and fries,policía de tampa,300.8664873026,0.2325581395,0.4102564103,0.0
+the candle factory,kama aesthetics,29.9590078948,0.2424242424,0.7916666667,0.0
+lavender massage,reno police dept,244.4405641113,0.3125,0.4615384615,0.0
+anytime fitness,goiano brazilian jiu jitsu academy,209.9388400233,0.2857142857,0.3076923077,0.0
+destination tan az,destination tan az,27.1527013913,1.0,0.7647058824,1.0
+pitas republic,lcpmd llc,300.5961697192,0.347826087,0.6875,0.0
+mouse trap escape,monster pizza,303.5129207768,0.4666666667,0.3571428571,0.0
+redneck wine,chateau de m,28.998207088,0.3333333333,1.0,0.0
+vitos lounge,bonanza inn,251.1812457228,0.2608695652,0.0,0.0
+sunny pizza,fedex office print ship center,312.8360882992,0.1463414634,0.380952381,0.0
+eyetech visioncare,amvets post 1 reno nv,242.688785788,0.3076923077,0.375,0.0
+winn dixie,henning law firm pa,211.0961475043,0.275862069,0.4615384615,0.0
+ybor city chiropractic,nanas restaurant and juice bar,72.4084898011,0.2692307692,0.8571428571,0.0
+ristenpart law,ristenpart law,1.934632055,1.0,1.0,1.0
+tmobile,bay care medical group pediatrics,195.211452818,0.2,0.7441860465,0.0
+ross dress for less,circuit city,271.0665512693,0.1290322581,0.52,0.0
+rentawheel,cellphone world,263.0757985608,0.32,0.8421052632,0.0
+zpizza,adt security services,337.7385664897,0.0740740741,0.5,0.0
+medusa kabob house,the district on 5th,197.8791357548,0.3783783784,0.5517241379,0.0
+urological associates of southern arizona pc,urological associates of southern arizona pc,3.4177029404,1.0,1.0,1.0
+toasted pheasant,carrollwood dental studio,201.6887881606,0.3414634146,0.8636363636,0.0
+signal doors,signal doors,10.8541457523,1.0,1.0,1.0
+crossfit northwest tucson,product design engineers,359.0905981366,0.3265306122,0.7083333333,0.0
+mad titan toys,cooling heating by carls service,76.3288567214,0.3043478261,0.9,0.0
+arizona pest control company,menolabs,155.0932287125,0.2777777778,0.4102564103,0.0
+fas windows doors,renuit,199.4678141404,0.0869565217,0.875,0.0
+starbucks,starbucks,49.5726392193,1.0,0.6976744186,1.0
+hiccups churroholic,abi neal tampa realtor,96.303933852,0.243902439,0.8181818182,0.0
+commune co,frost family law,271.0831225477,0.2307692308,0.2068965517,0.0
+zambia smokehouse,zambia smokehouse,40.3832344347,1.0,0.3529411765,1.0
+theory,christopher gardella reno allstate insurance agency,199.2619328502,0.2105263158,0.3870967742,0.0
+shahs halal,american tax resolution strategies,233.0650968251,0.2222222222,0.2857142857,0.0
+mcdonalds,mcdonalds,7.4667971376,1.0,0.8484848485,1.0
+sugar salon and medical spa,shaun wesley salon,356.1870167995,0.4,0.4444444444,0.0
+mattress firm el con,you and eyecare,157.3312801288,0.2285714286,0.85,0.0
+wolf city tattoo,noodle station,304.662825548,0.4666666667,0.1666666667,0.0
+kromer investments,the loft reno,163.6930440817,0.3225806452,0.4827586207,0.0
+sulas,the florida museum of photographic arts,82.2054313889,0.1818181818,0.9285714286,0.0
+rooms to go kids,western union,330.7828111024,0.275862069,0.8780487805,0.0
+align physical therapy group,peppermill casinos,171.0123582701,0.2608695652,0.1428571429,0.0
+the bunker,ybor city cigar festival,125.8189213564,0.1764705882,0.5,0.0
+unlock me services,tampas african american history museum at encore,203.3478611899,0.2727272727,0.0,0.0
+dollar loan center,spectrum store,272.3586480807,0.25,0.76,0.0
+leanns cheesecakes,butcher n barbeque,33.109354084,0.2777777778,0.0,0.0
+dee master barber tabus barber lounge,renaissance reno downtown hotel spa,310.2886117709,0.3333333333,0.4444444444,0.0
+reno behavioral healthcare hospital,reno behavioral healthcare hospital,47.0333116643,1.0,1.0,1.0
+bilingual disc jockey,atencio dentistry,254.8605809358,0.3157894737,0.0,0.0
+the corner cafe and deli,exceedant,21.2663430286,0.3636363636,0.9130434783,0.0
+padillas tire and auto service,steinway piano gallery,296.3516504258,0.3846153846,0.0,0.0
+hayman jewelry co,eminence beauty body bar,91.7231730357,0.3414634146,0.875,0.0
+adinas custom cakes,reno tattoo company,131.3327547999,0.3684210526,0.0,0.0
+hussongs cantina reno,shims surplus supplies,258.228171709,0.3255813953,0.28125,0.0
+nestle toll house cafe,bbb wise giving of southern arizona,138.8157294734,0.350877193,0.8965517241,0.0
+lash glam wax by holly,labeeg building services,245.2445643463,0.2608695652,0.3428571429,0.0
+big bad wolf food truck,downtown executive offices,205.4717921974,0.2448979592,0.4516129032,0.0
+tucson orthopedic institute,mark dale wheeler md,382.5379777949,0.170212766,0.8965517241,0.0
+junmai station,windstream,264.2740610946,0.3333333333,0.3050847458,0.0
+seasons fresh,new york pizza express,220.4875813648,0.3428571429,0.4324324324,0.0
+serendipity salon spa,simonmed imaging macdill,374.6104703397,0.3555555556,0.4390243902,0.0
+davids world cycle,hair by ana,200.8976832969,0.3448275862,0.9090909091,0.0
+pho quyen,pet supermarket,30.2240887688,0.3333333333,0.8823529412,0.0
+clark pro painting,shanghai express chinese fast food,242.1479642112,0.3076923077,0.0,0.0
+borst automotive,borst automotive,11.2474432609,1.0,1.0,1.0
+carrollwood collision center,sneak a peek 4d ultrasound and boutique,346.1322982955,0.328358209,0.9230769231,0.0
+ink villains tattoos,ink villains tattoos,0.6908991232,1.0,1.0,1.0
+a dogs life,sojourn counseling group,264.4253466548,0.2857142857,0.7586206897,0.0
+luv child,winndixie,319.5863005705,0.2222222222,0.5,0.0
+itrekkers,retirement plan services,223.450010382,0.3636363636,0.25,0.0
+hub coffee roasters,hub coffee roasters,29.3250101782,1.0,1.0,1.0
+super heat and air,record nations,139.4653454589,0.375,0.8823529412,0.0
+humphreys barbershop,humphreys barbershop,13.574534087,1.0,1.0,1.0
+decibel coffee works,faun salon,238.550830559,0.2,0.0,0.0
+nicolas donut shop,tax travel multiservice inc,12.3989971352,0.2222222222,0.8,0.0
+velo reno,bookkeeping by trifox,78.3163317056,0.2666666667,0.6875,0.0
+safeway,great clips,53.2114766218,0.2222222222,0.3571428571,0.0
+toro loco,southwest smokeless,280.9348463251,0.2142857143,0.3333333333,0.0
+allergy asthma immunology associates,elite facial plastic surgery,217.528633723,0.34375,0.8571428571,0.0
+la mesa tortillas,new life counseling,123.3812115157,0.2777777778,0.303030303,0.0
+yogurt beach,chevys fresh mex restaurants,196.8904561624,0.25,0.9166666667,0.0
+rice house,roach law firm,276.2512124275,0.25,0.25,0.0
+att store,reno allergy athsma clinic,290.6486111463,0.1714285714,0.3414634146,0.0
+five guys burgers and fries,kimedia strategies,326.5119890041,0.4,0.3333333333,0.0
+wangs table,statewide lighting,275.026702507,0.275862069,0.7142857143,0.0
+toni guy tucson,totally pagoda,58.7426712988,0.3448275862,0.5,0.0
+zacharias lawrence cpa group,south tampa fitness kickboxing,84.3631717746,0.3103448276,0.4210526316,0.0
+eagle cleaners,woodies wash shack,214.8467493873,0.25,0.8571428571,0.0
+pappoules,cold stone creamery,208.8188732278,0.2142857143,1.0,0.0
+avenida suites,r bar,334.1688429864,0.1052631579,0.3571428571,0.0
+allvitae health chiropractic,paramount plaza,28.4717141264,0.2790697674,0.8461538462,0.0
+tmobile,brow art 23,186.3076076519,0.1111111111,0.3333333333,0.0
+hobby lobby,laynes clocks,194.7282822412,0.3333333333,0.7083333333,0.0
+opas best greek american cuisine,sun lighting,127.3274842215,0.2727272727,0.9,0.0
+fedex office print ship center,pizza fusion,252.5262781323,0.2857142857,0.3255813953,0.0
+divinity beauty bar,showtime cards,113.7854507204,0.303030303,0.85,0.0
+lee roy selmons,suncoast skin solutions,32.5970493198,0.3684210526,0.9545454545,0.0
+dentistry on 1st,dentistry on first,10.9673742181,0.8823529412,1.0,1.0
+grain and berry carrollwood,believe it and achieve it,365.8935257992,0.3076923077,0.8636363636,0.0
+hm,jim click hyundai used cars,81.2953252054,0.0689655172,0.0,0.0
+flashback toys collectibles,jelly donut,144.9824371325,0.2631578947,0.2631578947,0.0
+tiffany co,brow art 23,177.2480618659,0.1904761905,0.2307692308,0.0
+the growler guys,biggest little learning center,138.4170964852,0.3043478261,0.7368421053,0.0
+maynards,agave 350,188.3331403631,0.2352941176,0.375,0.0
+chinese duck house,lifesafer ignition interlock,202.1487720213,0.3043478261,0.4,0.0
+country inn suites by radisson tampa rj stadium,central firearms,115.5501224597,0.3174603175,0.4102564103,0.0
+contigo latin kitchen,contigo latin kitchen,15.4588298115,1.0,1.0,1.0
+la lechonera,la lechonera,7.0571366908,1.0,1.0,1.0
+ruth hair salon,mezza luna pizzeria,70.6412610533,0.2941176471,0.8823529412,0.0
+mcdonalds,sherwinwilliams,86.1089736515,0.25,0.72,0.0
+megabus,mayas south indian cuisine,186.9330811288,0.2424242424,0.0,0.0
+babies r us the baby superstore,alterations by tam,157.7956098833,0.3673469388,0.9375,0.0
+milton merlos music,ecopest management,207.2233861342,0.2702702703,0.0,0.0
+sacred heart catholic church,sacred heart catholic church,26.6521463969,1.0,0.4375,1.0
+mouse trap escape,the great american rolling paper company,271.493190961,0.350877193,0.3571428571,0.0
+the joint chiropractic,the joint chiropractic,12.7322726846,1.0,0.8095238095,1.0
+natural market,natural market,12.7133998106,1.0,1.0,1.0
+five guys,whip n spur,194.0185975051,0.3,0.7692307692,0.0
+no anchovies,pass math class,110.3611932333,0.2962962963,0.9047619048,0.0
+lincoln tactical,bonfire games,126.5411737069,0.275862069,0.9047619048,0.0
+walgreens,walgreens,1.6356276263,1.0,0.8260869565,1.0
+cox cable,tucson presidio,231.2777530917,0.3333333333,0.0,0.0
+skin nv,deric raymond coastal properties group,255.7801505872,0.1333333333,0.4,0.0
+john l aramini dds,midtown mutts,197.6778232443,0.3225806452,0.3428571429,0.0
+arizona snake fence,arizona snake fence llc,18.6129508614,0.9047619048,0.8,1.0
+metropawn,element reno experience district,301.9403902844,0.3414634146,0.3783783784,0.0
+hogan school of real estate,rentacenter,126.3097052919,0.3157894737,0.8,0.0
+far east chinese restaurant,sunoco gas station,231.4392365711,0.3555555556,0.4137931034,0.0
+pedalers deli,dalton plummer sierra nevada properties s203083,204.7777225435,0.3333333333,0.487804878,0.0
+banfield pet hospital,coinflip bitcoin atm,184.7787880284,0.3902439024,0.95,0.0
+abu omar halal,aesthetics 129,217.8591321639,0.1428571429,0.8823529412,0.0
+caesars salon,soulcendent massage,183.3232611275,0.375,0.3846153846,0.0
+internal revenue service reno,net nv,145.8521176219,0.2857142857,0.3870967742,0.0
+sushi pier midtown,john c boyden,325.0745206837,0.3225806452,0.3125,0.0
+sammy el sinaloense hot dogs,frontier gun shop,202.9225595389,0.2666666667,0.4390243902,0.0
+soho oasis cafe,regions bank,332.7365353326,0.2962962963,0.625,0.0
+cappys breakfast cafe,boost mobile,3.6947942604,0.303030303,0.9333333333,0.0
+franklin street cleaners alterations,fresh life co,127.7664738848,0.3265306122,0.5,0.0
+hosted charcuterie,nvgemme real estate,333.6474173404,0.2702702703,0.0,0.0
+kwoks bistro,kwoks bistro,7.3650788943,1.0,0.8461538462,1.0
+desert palms physical therapy movement studio institute,ortho sport spine physicians,61.1085917515,0.3614457831,0.9047619048,0.0
+primrose school of south tampa,primrose school of south tampa,0.8484110988,1.0,1.0,1.0
+burger showdown,inside the box,253.5788087293,0.275862069,0.275862069,0.0
+besito mexican restaurant,shelbys sugar shop,128.138533092,0.2790697674,0.8421052632,0.0
+the local draught house,ci group,314.760440856,0.3225806452,0.3870967742,0.0
+the still speakeasy,hart technology solutions,156.7560212902,0.3181818182,0.3428571429,0.0
+cold stone creamery,cold stone creamery,7.1296870626,1.0,1.0,1.0
+the pint and brew downtown tampa,property protection lawyers,244.8156889874,0.3389830508,0.4,0.0
+wild wild wash,wild wild wash,9.3534171519,1.0,1.0,1.0
+gasparilla festival of the arts,dominos,415.6709472998,0.1578947368,0.3,0.0
+om yoga,las margaritas,101.7702981678,0.2857142857,0.875,0.0
+thai island,yeomans road pub,82.0846627859,0.2962962963,0.875,0.0
+chinese gourmet express,sears,166.0183920429,0.2857142857,0.2702702703,0.0
+sears auto center,torrid,248.1428413702,0.2608695652,0.7428571429,0.0
+barrio sandwiches,geno davis photography,96.749203544,0.2564102564,0.8666666667,0.0
+hawks electric tattoo,hawks electric tattoos,7.1616703218,0.976744186,1.0,1.0
+starbucks,siam thai cuisine,161.1978467773,0.3846153846,0.8717948718,0.0
+nana and pops eatery,alma chilson,158.3773607087,0.25,0.3255813953,0.0
+embellish home,realty executives tanque verde,270.149084139,0.2727272727,0.7169811321,0.0
+z1JQVu0N_y1yUo9Tv0ZK2g,siegel suites virginian,205.7106022982,0.3181818182,0.8484848485,0.0
+little caesars,fairly grounded coffee and tea,129.2893720499,0.3636363636,0.2,0.0
+eleven café,tucson tax attorney irs tax settlement,133.4110222255,0.2040816327,0.5777777778,0.0
+robert half,pearson professional centers,149.5501233458,0.2564102564,0.7659574468,0.0
+yama sushi,metropawn,230.9508425717,0.2105263158,0.3243243243,0.0
+oriental express chinese sushi restaurant,old hillsborough county courthouse,187.2884028974,0.3466666667,0.4516129032,0.0
+reno cycles gear,reno cycles gear,7.8569685828,1.0,1.0,1.0
+soak,brickies tavern,80.6287662698,0.2105263158,0.8333333333,0.0
+aaa airwaves,petes machine shop,116.27416607,0.3333333333,0.2941176471,0.0
+five guys famous burgers fries,microblading tampa,191.2975068094,0.2083333333,0.9090909091,0.0
+envy nail,coffee evi,97.6535512983,0.3157894737,0.7391304348,0.0
+the river view café at the siena,equipmentshare,309.241316046,0.2608695652,0.4347826087,0.0
+empienada,blind onion pizza,56.0340489533,0.3076923077,0.8571428571,0.0
+godiva chocolatier,johnny was,203.0093304008,0.2142857143,0.8461538462,0.0
+hayman jewelry co,brevco services,223.0735204362,0.25,0.3548387097,0.0
+gen x tavern,audit florida,277.1214696317,0.16,0.875,0.0
+nevada physical therapy,outdoor power,165.3542874176,0.2777777778,0.8,0.0
+residence inn tampa downtown,dump my junk,314.4583668294,0.25,0.4827586207,0.0
+sierra orthopaedic physical therapy,reno realty,32.4638353906,0.347826087,0.8235294118,0.0
+magic touch hair salon spa,magic touch hair salon spa,17.2198163513,1.0,0.8333333333,1.0
+subway,experts garage door repair installation process,109.761081461,0.0754716981,0.6666666667,0.0

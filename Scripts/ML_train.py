@@ -9,7 +9,7 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 # 1. TRAIN on the Hard/Manual Philly/SB data you just generated
 # TRAIN_FILE = 'data/training_pairs_labeled_temp.json' 
 # train on easy
-TRAIN_FILE = 'data/training_pairs_labeled.json' 
+TRAIN_FILE = 'data/training_pairs_labeled_temp.json' 
 
 # 2. TEST on your small, high-quality "Stress Test"
 # CHANGE THIS TO YOUR CSV FILENAME

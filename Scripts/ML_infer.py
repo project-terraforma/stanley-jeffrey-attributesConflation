@@ -4,7 +4,7 @@ import os
 
 # --- CONFIG ---
 # We run inference on the generated pairs file
-INPUT_FILE = 'data/training_pairs_labeled.json'
+INPUT_FILE = 'data/training_pairs_labeled_temp.json'
 MODEL_FILE = 'models/entity_matching_model.pkl'
 OUTPUT_FILE = 'data/processed/ml_predictions.csv'
 
