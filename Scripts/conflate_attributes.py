@@ -19,6 +19,7 @@ import os, json
 import pandas as pd
 import statistics
 from collections import Counter
+import random
 
 # --- CONFIG ---
 CLUSTERS_IN = "data/place_clusters.json"
@@ -26,7 +27,8 @@ META_IN = "data/meta_lookup.csv"
 ORIG_IN = "data/normalized_p_sb_data.json"
 OUT = "data/final_golden_records.json"
 
-SOURCE_PRIORITY = {'yelp': 1, 'omf': 2, 'osm': 3}
+# NEW (The "Stress Test"):
+SOURCE_PRIORITY = {'osm': 1, 'omf': 2, 'yelp': 3}
 
 def load_meta(path):
     if os.path.exists(path):
@@ -45,6 +47,11 @@ def choose_name(members, meta):
     for m in members:
         rec = meta.get(m)
         if not rec: continue
+# --- THE "SPARSITY" SIMULATION ---
+        # "Simulate that Yelp is missing 15% of the time"
+        if rec.get('source') == 'yelp':
+            if random.random() < 0.15:  # 15% chance to ignore Yelp
+                continue
         nm = rec.get('name')
         if nm and str(nm).strip():
             candidates.append((nm, rec.get('source')))
