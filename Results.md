@@ -1,16 +1,19 @@
-Ruled Based Selection Metrics:
+Rule Based Selection Metric:
 
-name: Accuracy=76.47%, Precision=100.00%, Recall=76.47%, F1=86.67%
-phone: Accuracy=94.12%, Precision=100.00%, Recall=94.12%, F1=96.97%
-address: Accuracy=100.00%, Precision=100.00%, Recall=100.00%, F1=100.00%
-categories: Accuracy=64.71%, Precision=100.00%, Recall=64.71%, F1=78.57%
-website: Accuracy=64.71%, Precision=100.00%, Recall=64.71%, F1=78.57%
+| Attribute  | Accuracy | Precision | Recall  | F1      |
+| ---------- | -------- | --------- | ------- | ------- |
+| Name       | 76.47%   | 100.00%   | 76.47%  | 86.67%  |
+| Phone      | 94.12%   | 100.00%   | 94.12%  | 96.97%  |
+| Address    | 100.00%  | 100.00%   | 100.00% | 100.00% |
+| Categories | 64.71%   | 100.00%   | 64.71%  | 78.57%  |
+| Website    | 64.71%   | 100.00%   | 64.71%  | 78.57%  |
 
-Overall Average Metrics:
-Accuracy:  80.10%
-Precision: 100.00%
-Recall:    80.10%
-F1 Score:  88.16%
+| Metric    | Value   |
+| --------- | ------- |
+| Accuracy  | 80.10%  |
+| Precision | 100.00% |
+| Recall    | 80.10%  |
+| F1 Score  | 88.16%  |
 
 
 
