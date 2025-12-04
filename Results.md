@@ -48,3 +48,17 @@ Scripts to run order:
 17. <img width="1463" height="45" alt="image" src="https://github.com/user-attachments/assets/79477f7d-9486-4e4e-bab8-66ac790eb318" />
 18. python Scripts/eval_conflation.py
 19. <img width="687" height="264" alt="Screenshot 2025-12-02 at 5 56 40 PM" src="https://github.com/user-attachments/assets/60eef15d-d108-49e7-9dcc-1d449bb18618" />
+
+
+
+Machine Learning Selection:
+
+| ATTRIBUTE  | ACCURACY | PRECISION | RECALL | F1 SCORE |
+| :---       | :---     | :---      | :---   | :---     |
+| **name** | 78.00%   | 78.00%    | 78.00% | 78.00%   |
+| **phone** | 88.00%   | 88.00%    | 88.00% | 88.00%   |
+| **address**| 100.00%  | 100.00%   | 100.00%| 100.00%  |
+| **website**| 85.00%   | 85.00%    | 85.00% | 85.00%   |
+| **category**| 72.00%   | 72.00%    | 72.00% | 72.00%   |
+| ----------------- | ---------- | ---------- | ---------- | ---------- |
+| **OVERALL**| **84.60%** | **84.60%** | **84.60%** | **84.60%** |
