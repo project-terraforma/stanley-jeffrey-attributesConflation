@@ -5,9 +5,9 @@ Our project aims to develop an automated decision logic for **attribute conflati
 This process supports the broader **Overture initiative** to unify place data from multiple providers into clean, high-quality records.
 
 ---
+Check Hybrid model: https://github.com/project-terraforma/stanley-jeffrey-attributesConflation/tree/after-normalization1
 
 ## Repo Structure
-Check Hybrid model: https://github.com/project-terraforma/stanley-jeffrey-attributesConflation/tree/after-normalization1
 
 ```text
 .
