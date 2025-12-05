@@ -7,7 +7,7 @@ This process supports the broader **Overture initiative** to unify place data fr
 ---
 
 ## Repo Structure
-
+Check Hybrid model: https://github.com/project-terraforma/stanley-jeffrey-attributesConflation/tree/after-normalization1
 
 ```text
 .
